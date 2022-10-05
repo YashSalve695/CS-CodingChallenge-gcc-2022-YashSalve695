@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main
+{
+
+	 public static void solve(String num){
+        
+        // String s = Integer.toString(n);
+        
+        int even = 0;
+        int odd = 0;
+        
+         for(int i = 1; i < num.length(); i++){
+             char ch = num.charAt(i);
+             
+             if(ch % i == 0){
+                 even++;
+             } else {
+                 odd++;
+             }
+         }
+        
+         if(even > odd){
+             System.out.println("BUY");
+         } else if(odd > even){
+             System.out.println("SELL");
+         } else if(even == odd){
+             System.out.println("PASS");
+         }
+        
+    }
+    
+    
+    public static void main(String[] args) {
+       
+       Scanner sc = new Scanner(System.in);
+       String s = sc.next();
+       
+       solve(s);
+	}
+}
